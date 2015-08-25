@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
-namespace Shape
+namespace Shapes
 {
-    class shape
+    public abstract class Shape : IShape
     {
+        //We need info about Colors
+        Color fillColor;
+        Color borderColor;
+
+        public Color FillColor { get; set; }
+        public Color BorderColor { get; set; }
+
+        public abstract float Area();
+
+        public abstract float Perimeter();
     }
 }

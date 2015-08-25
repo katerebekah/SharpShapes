@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public interface IShape
+    public abstract class AQuadrilateral
     {
-        float Area();
-        float Perimeter();
-
+        //Exercise for reader.
     }
 }
