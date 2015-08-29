@@ -17,13 +17,22 @@ namespace UnitTestShapes
     [TestMethod]
     public void TestQuadrilateralCanComputePerimeter()
     {
-        QuadTestClass myQuadrilateral = new QuadTestClass();
-        myQuadrilateral.Side1 = 2;
-        myQuadrilateral.Side2 = 4;
-        myQuadrilateral.Side3 = 99;
-        myQuadrilateral.Side4 = 6;
+        Quadrilateral myQuadrilateral = new Quadrilateral();
+        myQuadrilateral.Top = 2;
+        myQuadrilateral.Right = 4;
+        myQuadrilateral.Bottom = 99;
+        myQuadrilateral.Left = 6;
         Assert.AreEqual(myQuadrilateral.Perimeter(), 111);
 
     }
+        [TestMethod]
+        public void QuadrilateralCanGetSideLength()
+        {
+            Quadrilateral myQuadrilateral = new Quadrilateral();
+            myQuadrilateral.Top = 2;
+            Assert.AreEqual(myQuadrilateral.Top, 2);
+
+        }
+
     }
 }

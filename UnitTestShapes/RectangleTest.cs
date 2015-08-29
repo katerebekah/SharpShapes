@@ -8,7 +8,7 @@ namespace UnitTestShapes
     public class RectangleTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DefaultContructorCanComputeArea()
         {
             var rectangle = new Rectangle();
             rectangle.Top = 4;
@@ -18,7 +18,7 @@ namespace UnitTestShapes
             Assert.AreEqual(rectangle.Area(), 12);
         }
         [TestMethod]
-        public void TestMethod2()
+        public void RectangleContructorCanComputeArea()
         {
             var rectangle = new Rectangle(3, 4);
             Assert.AreEqual(rectangle.Area(), 12);

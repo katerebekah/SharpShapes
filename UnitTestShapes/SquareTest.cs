@@ -8,7 +8,7 @@ namespace UnitTestShapes
     public class SquareTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DefaultSquareContructorCanComputeArea()
         {
             var square = new Square();
             square.Top = 5;
@@ -19,7 +19,7 @@ namespace UnitTestShapes
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void SquareContructorCanComputeArea()
         {
             var square = new Square(5);
             Assert.AreEqual(square.Area(), 25);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public abstract class Quadrilateral : Shape
+    public class Quadrilateral : Shape
     {
         private float top;
         private float bottom;
@@ -21,7 +21,7 @@ namespace Shapes
             }
             set
             {
-                if (value <= 0.0)
+                if (value >= 0.0)
                 {
                     this.top = value;
                 }
@@ -35,7 +35,7 @@ namespace Shapes
             }
             set
             {
-                if (value <= 0.0)
+                if (value >= 0.0)
                 {
                     this.right = value;
                 }
@@ -49,7 +49,7 @@ namespace Shapes
             }
             set
             {
-                if (value <= 0.0)
+                if (value >= 0.0)
                 {
                     this.bottom = value;
                 }
@@ -63,13 +63,13 @@ namespace Shapes
             }
             set
             {
-                if (value <= 0.0)
+                if (value >= 0.0)
                 {
                     this.left = value;
                 }
             }
         }
-        public Quadrilateral() : base() { }
+        public Quadrilateral() { }
         public Quadrilateral(float top, float right, float bottom, float left)
         {
             this.Top = top;
@@ -78,7 +78,7 @@ namespace Shapes
             this.Left = left;
         }
 
-        public abstract override float Area();
+        public override float Area() { throw new NotImplementedException(); }
              
         public override float Perimeter()
         {

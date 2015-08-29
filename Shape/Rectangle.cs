@@ -8,8 +8,10 @@ namespace Shapes
 {
     public class Rectangle : Quadrilateral
     {
-        public Rectangle() { }
-        public Rectangle(int side1, int side2)
+
+        public Rectangle() : base() { }
+
+        public Rectangle(float side1, float side2) :base()
         {
             this.Top = side1;
             this.Right = side2;
@@ -19,6 +21,10 @@ namespace Shapes
 
         public override float Area()
         {
+            if (this.Top <= 0 || this.Right <= 0)
+            {
+                throw new ArgumentException();
+            }
             return this.Top * this.Right;
         }
     }
